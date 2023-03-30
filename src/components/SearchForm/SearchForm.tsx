@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {TextField, Grid, Button, Select, MenuItem, SelectChangeEvent, FormControl, InputLabel} from '@mui/material';
+import {Grid, Button, Select, MenuItem, SelectChangeEvent, FormControl, InputLabel} from '@mui/material';
 import {DatePicker, LocalizationProvider} from '@mui/x-date-pickers';
 import {SearchFormData} from '../../types';
 import {AdapterDateFns} from "@mui/x-date-pickers/AdapterDateFns";
@@ -11,7 +11,7 @@ interface SearchFormProps {
   loading: boolean;
 }
 
-export const SearchForm: React.FC<SearchFormProps> = ({onSearch, loading}) => {
+export const SearchForm: React.FC<SearchFormProps> = ({onSearch}) => {
   const [formData, setFormData] = useState<SearchFormData>({
     from: "",
     to: "",
